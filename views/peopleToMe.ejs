@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Due notes</title>
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
+    <form action="/add_due_to_me" method="post" class="popup_form" id ="popup_form_to_me_due">
+
+      <textarea name="id_due_toMe" id="id_due_toMe" class="id_toBoth" cols="30" rows="10">dola</textarea>
+
+      <h3>Date</h3>
+      <input type="text" name="date" placeholder="Enter Date">
+      <h3>Due amount</h3>
+      <input type="number" name="due_amount" placeholder="Enter due amount">
+      <h3>Reason</h3>
+      <input type="text" name="reason" placeholder="Enter Reason">
+      <button type="submit" id="ok_due">OK</button>
+      <button id="cancel_due">Cancel</button>
+    </form>
+    <form action="/add_payment_to_me" method="post" class="popup_form" id ="popup_form_to_me_paid">
+
+      <textarea name="id_paid_toMe" id="id_paid_toMe" class="id_toBoth" cols="30" rows="10">dola22</textarea>
+
+      <h3>Date</h3>
+      <input type="text" name="date" placeholder="Enter Date">
+      <h3>Paid amount</h3>
+      <input type="number" name="paid_amount" placeholder="Enter paid amount">
+      <h3>Reason</h3>
+      <input type="text" name="reason" placeholder="Enter Reason">
+      <button type="submit" id="ok_due">OK</button>
+      <button id="cancel_due">Cancel</button>
+    </form>
+    <div class="switch">
+      <!-- <button id="peopleToMe"> People's Dues to me</button>
+      <button id="meToPeople">My Dues</button> -->
+      <button id="peopleToMe"><a href="/">People's Dues to me</a></button>
+      <button id="meToPeople"><a href="/meToPeople">My Dues</a></button>
+    </div>
+
+    <div class="subject">
+      <h1>People's Dues to me</h1>
+      <button class="add_people" id="add_people">Add People</button>
+      <div class="form-popup" id="myForm">
+        <form action="/nameToMe" method="post" class="form-container">
+          <label for="name"><b>Name</b></label>
+          <input type="text" placeholder="Enter Name" name="name"/>
+
+          <button type="submit" class="btn" id="add_people_ok">OK</button>
+          <button type="button" class="cancel_people">Close</button>
+        </form>
+      </div>
+      <!-- <button class="open-button" onclick="openForm()">Open Form</button> -->
+    </div>
+
+    <div class="container" id="container">
+      <table>
+        <!-- <thead>
+          <tr>
+            <th> </th>
+          </tr>
+        </thead> -->
+        <tbody id="total_peoples">
+          <% user.forEach((item)=>{%>
+          <tr>
+            <td>
+              <table>
+
+                <p id="id_name">toto<%= item.id %></p>
+
+                <div class="name" id="name">
+                  <p>Name: <span><%= item.name %></span></p>
+                  <button class="remove_people">Remove people</button>
+                </div>
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Due</th>
+                    <th>Paid</th>
+                    <th>Total</th>
+                    <th>Reason</th>
+                  </tr>
+                </thead>
+                <tbody id="due_items">
+                  <tr>
+
+                    <!-- <td>24th August</td>
+                    <td>15000</td>
+                    <td>0</td>
+                    <td>15000</td>
+                    <td>Poco X3</td>
+                    <td><button class="add_due">Delete item</button></td> -->
+                  </tr>
+                </tbody>
+              </table>
+              <button class="add_due" id="add_due">Add Due</button>
+              <button class="add_payment" id="add_payment">Add Payment</button>
+            </td>
+          </tr>
+
+          <% }) %>
+        </tbody>
+      </table>
+
+      <br />
+      <br />
+    </div>
+
+    <!-- 
+    <div class="container">
+      <div class="name">
+         <p>Name: Telaa</p>
+         <button class="remove_people">Remove people</button>
+      </div>
+    
+      <table>
+        <div class="name">
+          <p>Name: Telaa</p>
+          <button class="remove_people">Remove people</button>
+       </div>
+        <tr>
+          <th>Date</th>
+          <th>Due</th>
+          <th>Paid</th>
+          <th>Total</th>
+          <th>Reason</th>
+        </tr>
+        <tr>
+          <td>24th August</td>
+          <td>15000</td>
+          <td>0</td>
+          <td>15000</td>
+          <td>Poco X3</td>
+          <td><button class="add_due">Delete item</button></td>
+        </tr>
+    
+      </table>
+
+      <button class="add_due">Add Due</button>
+
+    </div> -->
+
+    <script src="../static/jquery-3.6.0.min.js"></script>
+    <script src="../static/due.js"></script>
+  </body>
+</html>

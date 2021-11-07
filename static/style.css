@@ -1,0 +1,109 @@
+.switch{
+    /* display: flex;
+    flex-direction: row; */
+    text-align: center;
+    
+}
+.switch button{
+    font-size: 23px;
+    padding: 10px;
+    background: white;
+}
+
+.space{
+    background-color: white;
+}
+.name{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(21, 124, 110);
+    border-top: 1.6px solid black;
+    border-right: 1.6px solid black;
+    border-left: 1.6px solid black;
+    color: white;
+    font-size: 25px;
+    padding-left: 5px;
+    box-shadow: 5px 0px 5px 0px black
+}
+.remove_people{
+    /* float: right;
+    position: relative; */
+    margin-left: auto;
+    margin-right: 0;
+    background-color: rgb(247, 160, 126);
+    border-left: 1.6px solid black;
+    font-size: 17px;
+    font-weight:700;
+}
+.delete_item{
+    height: 36px;
+    width: 100px;
+}
+.subject{
+    display:flex;
+    flex-direction: row;
+    padding-bottom: 0px;
+}
+.add_people{
+    margin-left: 30px;
+    margin-top: 23px;
+    margin-bottom: 23px;
+    width: 100px;
+}
+.add_due{
+    height: 36px;
+    width: 100px;
+}
+
+.add_payment{
+    height: 36px;
+    width: 100px;
+    margin-left: 20px;
+}
+.popup_form{
+    position:fixed;
+    display: none;
+    background: rgb(112, 112, 218);
+    margin-left: 40.6%;
+}
+
+#myForm {
+    display: none;
+    margin-left: 30px;
+    margin-top: 23px;
+    margin-bottom: 23px;
+    /* position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9; */
+  }
+#id_name{
+    display: none;
+}
+#id_name_2{
+    display: none;
+}
+.id_toBoth{
+    position:fixed;
+    display: none;
+}
+th,td{
+    padding: 19px;
+    border: 1px solid #ddcaca;
+    font-size:25px;
+}
+table{
+    background-color: rgb(247, 247, 103);
+    text-align: center;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1.6px solid black;
+    box-shadow: 5px 0px 5px 0px black
+}
+body{
+    background-color: rgb(219, 211, 211) ;
+}
+a{
+    text-decoration: none;
+}
